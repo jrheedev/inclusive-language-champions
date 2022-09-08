@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+  <body>
+
+    <h1>All terms are shown here</h1>
+
+  {% block content %} Body Content goes here {% endblock %}
+  {% for message in get_flashed_messages() %}
+  <li>{{message }}</li>
+  {% endfor %}
+  
+  {% if session %}
+  <fieldset>
+    <label>Flask Session</label>
+    {{ session }}
+  </fieldset>
+  {% endif %}
+  
+
+  </body>
+</html>

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}
+
+<h1>Inclusive Language Project</h1> {% endblock %}
+
+{% block body %}
+
+    <p></p>
+    <form action="/sentencequery", method="POST">
+ 
+        <label for="sentence">Enter your sentence <p></p></label>
+
+        <input type="text" name="sentence"></input>
+        <p></p>
+        <button type="submit">Submit</button>
+    </form>
+    <p></p>
+
+
+    <form action="/createuser", method="POST">
+ 
+        <label for="sentence">Create a new account <p></p></label>
+
+        <input type="text" name="username"></input>
+        <p></p>
+        <button type="submit">Create a new account</button>
+        <button type="submit">Log in</button>
+    </form>
+    <p></p>
+
+  
+<!-- Code for user log-in info -->
+
+<!-- <div>
+    <form action="/createuser" method="POST">
+        <label for="namefield">username</label>
+        <input type="text" name="username"></input>
+        <p></p>
+        <label for="passwordfield">password</label>
+        <input type="text" name="password"></input>
+        <p>
+        <button type="submit">Submit</button>
+    </form>
+</div> -->
+
+</body>
+</html>
+
+{% endblock %}
