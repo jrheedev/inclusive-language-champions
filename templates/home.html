@@ -5,20 +5,32 @@
 
 {% block body %}
 
-    <p></p>
-    <form action="/sentencequery", method="POST">
- 
-        <label for="sentence">Enter your sentence <p></p></label>
 
-        <input type="text" name="sentence"></input>
-        <p></p>
-        <button type="submit">Submit</button>
+    <form id="search-sentence">
+
+        <div>
+            <label for="sentence">Enter your sentence <p></p></label>
+
+            <input id="sentence" type="text" name="sentence"></input>
+            <p></p>
+            <button type="submit">Submit</button>
+
+            <script src="/static/search_sentence.js"></script>
+        </div>
     </form>
-    <p></p>
+    <br>
+    <div id="user-response"> 
+    </div>
 
+    <div id="found-terms"> 
+    </div>
 
-    <form action="/createuser", method="POST">
- 
+    <div id="suggested-terms"> 
+    </div>
+    <br>
+
+    <!-- <form action="/createuser", method="POST">
+
         <label for="sentence">Create a new account <p></p></label>
 
         <input type="text" name="username"></input>
@@ -26,7 +38,7 @@
         <button type="submit">Create a new account</button>
         <button type="submit">Log in</button>
     </form>
-    <p></p>
+    <p></p> -->
 
   
 <!-- Code for user log-in info -->

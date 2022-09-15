@@ -42,8 +42,27 @@ def create_term():
 
 @app.route("/sentencequery", methods=["POST"])
 def run_sentence_query():
-    user_sentence = request.form.get("sentence")
-    print(user_sentence)
+    """Receive sentence from user and return a response"""
+    user_gave_sentence= request.json.get("sentence")
+    print(user_gave_sentence)
+
+    db_word_search = crud.sentence_search_for_db_terms(user_gave_sentence)
+
+
+    # Invoke function in Crud.py -> sentence_search_for_db_terms(sentence)
+    # This function will return a dictionary but we want to store it in a variable
+    # (...) that we can use
+    # Add dictionary in our return jsonify response objects (close to line 56)
+    # 
+    # Take their sentence, pass it through database
+    #Return non_inclus terms
+
+    return jsonify({
+        "success": True,
+        "status": f"{user_gave_sentence}",
+        "search_complete": db_word_search
+
+    })
 
 @app.route("/base")
 def show_base():
