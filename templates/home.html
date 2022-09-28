@@ -1,32 +1,84 @@
 {% extends 'base.html' %}
 {% block title %}
 
-<h1>Inclusive Language Project</h1> {% endblock %}
+{% endblock %} 
 
 {% block body %}
 
 
+<!-- Another bootstrap way to display search  -->
+
+
     <form id="search-sentence">
 
-        <div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="sentence" placeholder="Enter your sentence" aria-label="sentence" aria-describedby="button-addon2">
+            <button class="button-bckgd-color" type="submit" id="search-sentence">Search <i class="bi bi-arrow-right-circle-fill" ></i></button>
+            <script src="/static/search_sentence.js"></script>
+         
+        </form>
+    </div>
+
+    
+    <div class="container">
+      <div class="row">
+      
+      <div class="col"></div>
+          <figure>
+            <blockquote>
+                <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+            </blockquote>
+            <figcaption>Aldous Huxley, <cite>Brave New World</cite></figcaption>
+            </figure>
+        </div>
+      </div>
+    </div>
+
+<!-- original search  -->
+
+        <!-- <div>
             <label for="sentence">Enter your sentence <p></p></label>
 
             <input id="sentence" type="text" name="sentence"></input>
             <p></p>
-            <button type="submit">Submit</button>
+            <button type="submit" class= "rounded-pill" style="color: #073b4c"> Submit <i class="bi bi-arrow-right-circle-fill" ></i> </button>
 
             <script src="/static/search_sentence.js"></script>
         </div>
     </form>
-    <br>
-    <div id="user-response"> 
+  -->
+
+    <div class="container">
+
+        <div class="row" >
+        <div class="col-4" style="width: 400px;">
+            <div id="user-response"> 
+            </div>
+          </div>
+
+          <div class="col-4" style="width: 400px;">  
+            <div id="found-terms">
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div id="suggested-terms" style="width: 400px;"> 
+            </div>
+          </div>
+    
+        </div>
+      </div>
+
+      <!-- Code to show user responses run through the database -->
+
+    <!-- <div id="user-response"> 
     </div>
 
     <div id="found-terms"> 
     </div>
 
     <div id="suggested-terms"> 
-    </div>
+    </div> -->
     <br>
 
     <!-- <form action="/createuser", method="POST">
@@ -40,7 +92,7 @@
     </form>
     <p></p> -->
 
-  
+
 <!-- Code for user log-in info -->
 
 <!-- <div>
@@ -56,6 +108,8 @@
 </div> -->
 
 </body>
+
+
 </html>
 
 {% endblock %}

@@ -1,0 +1,77 @@
+
+
+h1, h2, h3, h4 {
+  color: #cb997e; 
+  font-family: "Public Sans", sans-serif;
+} 
+
+background-color {
+  color: #a5a58d;
+} 
+
+.pad {
+  padding: 50px;
+}
+
+body {
+  color: #05182a;
+}
+
+button-bckgd-color {
+  color: #05182a;
+}
+
+.footer{
+  background: #152F4F;
+  color:white;
+  padding: 10px;
+  
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }  
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  } 
+  .location{
+    i{font-size: 18px;}
+  }
+  
+}
+
+.alignment {
+  display: block; 
+}
+
+blockquote {
+  margin: 0;
+  font-family: "karla", sans-serif;
+  font-size: x-large;
+}
+
+blockquote p {
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+

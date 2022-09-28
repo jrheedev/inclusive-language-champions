@@ -18,8 +18,7 @@ def home():
     #Show user the database findings for non_inclus_terms
     #Show those non_inclus_terms
     #Show term replacements instead without refreshing the page
-
-    #REFER TO AJAX DEMO 
+    #Reference AJAX demo
 
     return render_template('home.html')
 
@@ -48,7 +47,6 @@ def run_sentence_query():
 
     db_word_search = crud.sentence_search_for_db_terms(user_gave_sentence)
 
-
     # Invoke function in Crud.py -> sentence_search_for_db_terms(sentence)
     # This function will return a dictionary but we want to store it in a variable
     # (...) that we can use
@@ -68,6 +66,14 @@ def run_sentence_query():
 def show_base():
     return render_template("base.html")
 
+@app.route("/login")
+def show_contact_page():
+    return render_template("login.html")
+
+@app.route("/aboutus")
+def show_about_us():
+    return render_template("aboutus.html")
+
 @app.route("/terms")
 def show_view_all_terms():
     return render_template("terms.html")
@@ -75,6 +81,10 @@ def show_view_all_terms():
 @app.route("/how-it-works")
 def show_how_it_works():
     return render_template("how-it-works.html")
+
+@app.route("/why-this-matters")
+def show_the_why():
+    return render_template("whythismatters.html")
 
 # if crud.search_count(x,y,z) == None:
 #     crud.create_count(x,y,z)

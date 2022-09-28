@@ -1,7 +1,6 @@
 """CRUD operations"""
 
 from urllib import response
-from itsdangerous import TimestampSigner
 from model import db, User, Count, Terminology, connect_to_db
 
 

@@ -37,6 +37,23 @@ non_inclus_term = model.Terminology(non_inclus_term = 'tkkk', inclus_term = 'bet
 model.db.session.add(non_inclus_term)
 model.db.session.commit()
 
+non_inclus_term2 = model.Terminology(non_inclus_term = 'abc', inclus_term = 'alphabet',  term_topic = 'random', explainer_desc='please')
+model.db.session.add(non_inclus_term2)
+model.db.session.commit()
+
+non_inclus_term3 = model.Terminology(non_inclus_term = 'guys', inclus_term = 'all',  term_topic = 'gender inclusion', explainer_desc='gender neutral terms can help nonbinary individuals feel more included in conversation')
+model.db.session.add(non_inclus_term3)
+model.db.session.commit()
+
+non_inclus_term4 = model.Terminology(non_inclus_term = 'blacklist', inclus_term = 'blocklist',  term_topic = 'racial equity', explainer_desc='blacklist can unintentionally conjure negative racial connotations and advance a false dichotomy, associating black with negative traits and white with positive traits. Instead, we offer other alternatives like blocklist, denylist instead. ')
+model.db.session.add(non_inclus_term4)
+model.db.session.commit()
+
+non_inclus_term5 = model.Terminology(non_inclus_term = 'master', inclus_term = 'primary',  term_topic = 'racial equity', explainer_desc='master can invoke the painful legacies of slavery. Instead, we suggest other alternatives like primary, replica, parent, active, trunk')
+model.db.session.add(non_inclus_term5)
+model.db.session.commit()
+
+
 #COUNT TEST DATA
 
 count_value1 = model.Count(count_value = 1353, term_id = 1, user_id = 1)
